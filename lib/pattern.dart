@@ -34,7 +34,7 @@ String escapeRegex(String str) => str.splitMapJoin(_specialChars,
 Pattern matchAny(Iterable<Pattern> include, {Iterable<Pattern>? exclude}) =>
     _MultiPattern(include, exclude: exclude);
 
-class _MultiPattern extends Pattern {
+class _MultiPattern implements Pattern {
   _MultiPattern(this.include, {this.exclude});
 
   final Iterable<Pattern> include;

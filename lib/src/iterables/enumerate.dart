@@ -71,7 +71,7 @@ class EnumerateIterable<V> extends IterableBase<IndexedValue<V>> {
 }
 
 /// The [Iterator] returned by [EnumerateIterable.iterator].
-class EnumerateIterator<V> extends Iterator<IndexedValue<V>> {
+class EnumerateIterator<V> implements Iterator<IndexedValue<V>> {
   EnumerateIterator(this._iterator);
 
   final Iterator<V> _iterator;
